@@ -4,12 +4,12 @@ This is a RESTful API project developed for the SE 4458 course. It simulates a s
 ## Features Overview
 | Platform | Role / API | Auth Required | Paging | Description |
 | :--- | :--- | :---: | :---: | :--- |
-| **Mobile App** | Query Bill | ✅ Yes | ❌ No | Query total bill & paid status. **Limit:** 3 calls per subscriber/day. |
-| **Mobile App** | Query Bill Detailed | ✅ Yes | ✅ Yes | Get detailed bill info for a subscriber. |
-| **Banking App** | Query Bill | ✅ Yes | ❌ No | List unpaid bills by month. |
-| **Website** | Pay Bill | ❌ No | ❌ No | Mark bill as paid. Partial payments are saved. **No real credit card processing.** |
-| **Admin** | Add Bill | ✅ Yes | ❌ No | Add a single bill for a subscriber for a given month. |
-| **Admin** | Add Bill – Batch | ✅ Yes | ❌ No | Add multiple bills via **.csv file upload**. |
+| **Mobile App** | Query Bill | Yes | No | Query total bill & paid status. **Limit:** 3 calls per subscriber/day. |
+| **Mobile App** | Query Bill Detailed | Yes | Yes | Get detailed bill info for a subscriber. |
+| **Banking App** | Query Bill | Yes | No | List unpaid bills by month. |
+| **Website** | Pay Bill | No | No | Mark bill as paid. Partial payments are saved. **No real credit card processing.** |
+| **Admin** | Add Bill | Yes | No | Add a single bill for a subscriber for a given month. |
+| **Admin** | Add Bill – Batch | Yes | No | Add multiple bills via **.csv file upload**. |
 
 ## Authentication & Security
 - **JWT-based Authentication:** Secure access for Admin and User roles.
