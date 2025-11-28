@@ -50,7 +50,7 @@ The system implements a custom Middleware to log key information for monitoring:
 - **Deployment:** Azure App Service
 
 ## Project Video
-[]
+[Click here to view Video]([https://mobile-provider-irmak-fwgpgsaqesdpcwh8.germanywestcentral-01.azurewebsites.net/swagger/index.html](https://drive.google.com/file/d/1Qh6eqgtuMhjzixbB6u8eG9sbDqKsbx0X/view?usp=drive_link))
 
 ## Live Demo (Swagger)
 [Click here to view Swagger UI](https://mobile-provider-irmak-fwgpgsaqesdpcwh8.germanywestcentral-01.azurewebsites.net/swagger/index.html)
