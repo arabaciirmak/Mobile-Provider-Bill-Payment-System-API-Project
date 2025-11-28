@@ -13,18 +13,22 @@ public class RateLimitingMiddleware
 
     public async Task Invoke(HttpContext context, IRateLimitingService rate)
     {
-        var subscriberNo = context.Request.Query["subscriberNo"].ToString();
+        var path = context.Request.Path.Value?.ToLower();
 
-        if (!string.IsNullOrEmpty(subscriberNo))
+        if (path != null && path.Contains("/query"))
         {
-            if (!rate.IsAllowed(subscriberNo))
+            var subscriberNo = context.Request.Query["subscriberNo"].ToString();
+
+            if (!string.IsNullOrEmpty(subscriberNo))
             {
-                context.Response.StatusCode = 429;
-                await context.Response.WriteAsync("Rate limit exceeded (3 per day).");
-                return;
+                if (!rate.IsAllowed(subscriberNo))
+                {
+                    context.Response.StatusCode = 429;
+                    await context.Response.WriteAsync("Rate limit exceeded (3 per day).");
+                    return;
+                }
             }
         }
-
         await _next(context);
     }
 }
