@@ -11,7 +11,7 @@ namespace MobileProviderApi.Controllers;
 [Route("api/v1/auth")]
 public class AuthController : ControllerBase
 {
-    private const string SecretKey = "SecretProjectKeyForFall2025!";
+    private const string SecretKey = "MobileProviderApiIrmakSuperSecretKey2025!!";
 
     [HttpPost("login")]
     [AllowAnonymous]

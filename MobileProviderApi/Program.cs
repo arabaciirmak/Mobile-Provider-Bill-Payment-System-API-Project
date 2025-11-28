@@ -32,7 +32,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
-var secretKey = "SecretProjectKeyForFall2025!";
+var secretKey = "MobileProviderApiIrmakSuperSecretKey2025!!";
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
